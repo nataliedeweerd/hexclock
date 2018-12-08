@@ -41,7 +41,7 @@
 
 <div class="social">
     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ndw.one/playground/hex_clock/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/home?status=Check%20out%20this%20awesome%20international%20hex%20clock%20which%20tells%20you%20the%20time%20in%20colourful%20hex%20codes!%20%40nataliedeweerd%20%23hexclock" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://twitter.com/home?status=Check%20out%20this%20awesome%20international%20hex%20clock%20which%20tells%20you%20the%20time%20in%20colourful%20hex%20codes!%20https%3A//ndw.one/playground/hex_clock/%20%40nataliedeweerd%20%23hexclock" target="_blank"><i class="fab fa-twitter"></i></a>
 </div>
 
 </body>
