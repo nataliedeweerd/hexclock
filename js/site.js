@@ -1,5 +1,11 @@
-jQuery(function($) {
-    startTime();
+jQuery(function ($) {
+	startTime();
+
+	if ("serviceWorker" in navigator) {
+		// register service worker
+		navigator.serviceWorker.register("service-worker.js");
+	}
+
 });
 
 function startTime() {
@@ -9,22 +15,22 @@ function startTime() {
 	var s = today.getSeconds();
 	m = checkTime(m);
 	s = checkTime(s);
-	
-	var bgcolour = h+""+m+""+s;
+
+	var bgcolour = h + "" + m + "" + s;
 	var invertedbgColour = invertHex(bgcolour);
-		
-	$('#clock').html("#"+h+""+m+""+s);
-	
-	$('body').css('background','#'+bgcolour);
-	$('.clock__bg').css('background','#'+invertedbgColour);
-	$('#clock').css('color','#'+bgcolour);
-	$('.social').css('color','#'+invertedbgColour);
-	
+
+	$('#clock').html("#" + h + "" + m + "" + s);
+
+	$('body').css('background', '#' + bgcolour);
+	$('.clock__bg').css('background', '#' + invertedbgColour);
+	$('#clock').css('color', '#' + bgcolour);
+	$('.social').css('color', '#' + invertedbgColour);
+
 	var t = setTimeout(startTime, 500);
 }
 
 function checkTime(i) {
-	if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+	if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
 	return i;
 }
 
@@ -33,7 +39,7 @@ function checkTime(i) {
 	Credit to Matt LaGrandeur
 	http://www.mattlag.com/scripting/hexcolorinverter.php
 */
-function invertHex(hexnum){
+function invertHex(hexnum) {
 	String(hexnum);
 	var splitnum = hexnum.split("");
 	var resultnum = "";
@@ -46,11 +52,11 @@ function invertHex(hexnum){
 	complexnum.E = "1";
 	complexnum.F = "0";
 
-	for(i=0; i<6; i++){
-		if(!isNaN(splitnum[i])) {
-			resultnum += simplenum[splitnum[i]]; 
-		} else if(complexnum[splitnum[i]]) {
-			resultnum += complexnum[splitnum[i]]; 
+	for (i = 0; i < 6; i++) {
+		if (!isNaN(splitnum[i])) {
+			resultnum += simplenum[splitnum[i]];
+		} else if (complexnum[splitnum[i]]) {
+			resultnum += complexnum[splitnum[i]];
 		}
 	}
 
