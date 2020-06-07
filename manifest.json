@@ -1,0 +1,21 @@
+{
+    "name": "Hex Clock by Natalie de Weerd",
+    "short_name": "hex-clock",
+    "start_url": "index.html",
+    "scope": "./",
+    "icons": [
+      {
+        "src": "images/hex-clock.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "images/hex-clock.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#edbfa9",
+    "background_color": "#114056",
+    "display": "standalone"
+  }
